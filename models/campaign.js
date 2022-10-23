@@ -19,4 +19,4 @@ const campaignSchema = new mongoose.Schema({
     }
 })
 
-mongoose.model('campaigns', campaignSchema);
+module.exports = mongoose.model('campaigns', campaignSchema);
