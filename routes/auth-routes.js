@@ -23,8 +23,9 @@ module.exports = app =>{
     );
 
     app.get(
-        '/api/currentuser',
+        '/api/currentUser',
         (req, res) => {
+            console.log("sending current user! " + req.user)
             res.send(req.user);
         }
     );
