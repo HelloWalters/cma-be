@@ -37,6 +37,7 @@ app.use(passport.session());
 require('./routes/auth-routes')(app);
 
 app.use(require('./src/campaigns/router'));
+app.use(require('./src/game-details/game-types/router'));
 
 app.use(express.json());
 

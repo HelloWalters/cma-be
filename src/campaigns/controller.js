@@ -1,9 +1,9 @@
-const Model = require('../../models/campaign');
+const campaignModel = require('../../models/campaign.model');
 
 module.exports = {
 
     async insertCampaign(req, res, next) {
-        let data = new Model({
+        let data = new campaignModel({
             campaignName: req.body.name,
             campaignDescription: req.body.description,
             isActive: true,
@@ -22,14 +22,14 @@ module.exports = {
     },
 
     async getCampaigns(req, res, next) {
-        const items = await Model.find();
+        const items = await campaignModel.find();
         res.status(200).send(items);
     }
     //Get all Method
     // app.get(
     //     '/getAllCampaigns',
     //     (req, res) => {
-    //         await Model.find();
+    //         await campaignModel.find();
     //         res.send();
     //     }
     // ),
